@@ -24,7 +24,6 @@ import globalStateContext from "../context/loc-context";
 
 
 
-
 const Mapsection = () => {
   const {loc, setLoc} = React.useContext(globalStateContext);
   const center = [loc.lat, loc.long]

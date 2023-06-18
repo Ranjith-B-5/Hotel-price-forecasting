@@ -12,7 +12,7 @@ import globalStateContext from './context/loc-context'
 const App = () => {
      
 
-  const [loc, setLoc] = useState({lat:37.0902,long:-95.7129});
+  const [loc, setLoc] = useState({lat:51.509865,long:-0.118092});
 
 
   
