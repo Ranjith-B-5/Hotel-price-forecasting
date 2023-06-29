@@ -19,7 +19,7 @@ function Dropdownbox(props) {
   return (
     <div>
     <p className='font-medium mb-1'>{props.label+":"}</p>
-    <Dropdown className="w-36 rounded-sm mr-10 mb-10" options={options}  value={defaultOption} placeholder="Select an option" onChange={props.func}/>;
+    <Dropdown className="w-36 rounded-sm mr-10 mb-10" options={options}  value={defaultOption} placeholder="Select an option" onChange={props.func}/>
     </div>
   )
 }

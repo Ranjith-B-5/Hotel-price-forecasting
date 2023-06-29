@@ -4,6 +4,8 @@ import Mapsection from './components/Mapsection'
 import Leftsection from './components/Leftsection'
 import axios from 'axios'
 import globalStateContext from './context/loc-context'
+import Header from './components/Header'
+
 
 
 
@@ -30,9 +32,13 @@ const App = () => {
     // sendPosition();
 
   return (
+
     <globalStateContext.Provider value={{loc , setLoc}}>
+      <Header></Header>
     <div className='flex flex-row flex-auto '>
-  <Leftsection></Leftsection>
+  <Leftsection>
+ 
+  </Leftsection>
   <Mapsection></Mapsection>
   </div>
   </globalStateContext.Provider>

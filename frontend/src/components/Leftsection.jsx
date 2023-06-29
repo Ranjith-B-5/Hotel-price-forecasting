@@ -14,6 +14,7 @@ const Leftsection = () => {
   const [bedrooms, setBedrooms] = useState({'value': 1, 'label': 1});
   const [predprice,setPredPrice] = useState(0)
 
+  console.log(predprice)
   function handleSubmit(e) {
     console.log("sending data")
     e.preventDefault();
@@ -99,9 +100,13 @@ const Leftsection = () => {
             onSubmit={handleSubmit}
             className=" bg-green-600  h-10 w-20 rounded-sm hover:scale-90"
           />
-          <p className="mt-8 text-xl">The predicted price is: {predprice}</p>
+          <div>
+          {parseFloat(predprice) === 0 ? (null) :(
+          <div className="h-24 w-64 bg-slate-700 rounded-sm flex flex-row justify-content content-center pl-2 mt-8 "><p className="mt-8 text-xl text-white">The predicted price is: £{predprice}</p></div>)}
+          </div>
         </div>
       </form>
+
     </div>
   )
 }
