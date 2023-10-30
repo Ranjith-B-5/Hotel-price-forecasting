@@ -1,20 +1,15 @@
 import React, { useState } from 'react'
-import { MapContainer, TileLayer ,useMap, Marker, Popup } from 'react-leaflet'
-import Mapsection from './components/Mapsection'
-import Leftsection from './components/Leftsection'
-import axios from 'axios'
-import globalStateContext from './context/loc-context'
-import Header from './components/Header'
-
-
-
+import Mainpage from './components/Mainpage'
+import Login from './components/Login'
+import { Routes, Route } from "react-router-dom";
+import Signup from './components/Signup'
 
 
 
 const App = () => {
      
 
-  const [loc, setLoc] = useState({lat:51.509865,long:-0.118092});
+
 
 
   
@@ -32,16 +27,11 @@ const App = () => {
     // sendPosition();
 
   return (
-
-    <globalStateContext.Provider value={{loc , setLoc}}>
-      <Header></Header>
-    <div className='flex flex-row flex-auto '>
-  <Leftsection>
- 
-  </Leftsection>
-  <Mapsection></Mapsection>
-  </div>
-  </globalStateContext.Provider>
+    <Routes>
+      <Route path="/" element={<Login></Login>}/>
+      <Route path="/home" element = {<Mainpage></Mainpage>}/>
+      <Route path ="/signup" element={<Signup/>}/>
+    </Routes>
   )
 }
 
